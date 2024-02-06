@@ -1,7 +1,12 @@
+<!-- 이 글의 마지막 과제에서는 몇 가지 테스트를 작성해 보겠습니다. 
+  각각 하나의 문과 두 개의 변수로 구성된 세 개의 그룹이 있습니다. 
+  각각에 대해 문을 증명하거나 반증하는 테스트를 작성하세요. 
+  이러한 테스트의 결과를 각각 weightComparison, heightComparison 및 pwdMatch라는 변수에 저장합니다. -->
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Math: Task 3</title>
     <style>
       p {
@@ -17,13 +22,7 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
     // Statement 1: The elephant weighs less than the mouse
@@ -39,6 +38,10 @@
     const pwd2 = 'stROmBoLi';
 
     // Add your code here
+    // Statement 1
+    weightComparison = eleWeight < mouseWeight;
+    heightComparison = ostrichHeight > duckHeight;
+    pwdMatch = pwd1 === pwd2;
 
     // Don't edit the code below here!
 
@@ -48,9 +51,15 @@
     const para2 = document.createElement('p');
     const para3 = document.createElement('p');
 
-    const weightTest = weightComparison ? 'True — elephants do weigh less than mice!?' : 'False — of course an elephant is heavier than a mouse!';
-    const heightTest = heightComparison ? 'True — an ostrich is indeed taller than a duck!' : 'False — apparently a duck is taller than an ostrich!?';
-    const pwdTest = pwdMatch ? 'True — the passwords match.' : 'False — the passwords do not match; please check them';
+    const weightTest = weightComparison
+      ? 'True — elephants do weigh less than mice!?'
+      : 'False — of course an elephant is heavier than a mouse!';
+    const heightTest = heightComparison
+      ? 'True — an ostrich is indeed taller than a duck!'
+      : 'False — apparently a duck is taller than an ostrich!?';
+    const pwdTest = pwdMatch
+      ? 'True — the passwords match.'
+      : 'False — the passwords do not match; please check them';
 
     para1.textContent = weightTest;
     section.appendChild(para1);
@@ -59,5 +68,4 @@
     para3.textContent = pwdTest;
     section.appendChild(para3);
   </script>
-
 </html>

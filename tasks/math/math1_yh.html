@@ -1,3 +1,16 @@
+<!-- 기본적인 수학 연산자에 대한 지식을 테스트하는 것부터 시작하겠습니다. 
+  네 개의 숫자 값을 만들고, 두 개를 더하고, 다른 하나에서 하나를 뺀 다음 결과를 곱합니다. 
+  마지막으로 이 값이 짝수임을 증명하는 수표를 작성해야 합니다.
+
+1. 숫자가 포함된 4개의 변수를 만듭니다. 변수에 의미 있는 이름을 붙입니다.
+2. 처음 두 변수를 더하고 그 결과를 다른 변수에 저장합니다.
+3. 세 번째 변수에서 네 번째 변수를 빼고 그 결과를 다른 변수에 저장합니다.
+4. 2단계와 3단계의 결과를 곱하고 그 결과를 finalResult라는 변수에 저장합니다.
+5. 산술 연산자 중 하나를 사용하여 finalResult가 짝수인지 확인합니다. 
+    결과(짝수인 경우 0, 홀수인 경우 1)를 evenOddResult라는 변수에 저장합니다.
+
+이 테스트를 통과하려면 finalResult의 값은 48이어야 하고 evenOddResult의 값은 0이어야 합니다. -->
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -24,16 +37,17 @@
 
     let evenOddResult;
     // Add your code here
-    let fir = 2;
-    let sec = 4;
-    let thi = 30;
-    let fou = 22;
+    const fir = 2;
+    const sec = 4;
+    const thi = 30;
+    const fou = 22;
 
-    let sum = fir + sec;
-    let sub = thi - fou;
+    const sum = fir + sec;
+    const sub = thi - fou;
     finalResult = sum * sub;
 
-    eventOddResult = Number(finalResult % 2 !== 0);
+    // evenOddResult = Number(finalResult % 2 !== 0);
+    evenOddResult = finalResult % 2;
 
     // Don't edit the code below here!
 

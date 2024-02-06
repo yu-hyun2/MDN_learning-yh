@@ -1,0 +1,64 @@
+<!-- 두 번째 작업에서는 결과가 결과 및 결과2 변수에 저장된 두 개의 계산이 제공됩니다. 
+  계산을 가져와서 곱하고 결과를 소수점 이하 두 자리까지 서식을 지정해야 합니다.
+
+아래의 라이브 코드를 업데이트하여 다음 단계에 따라 완성된 예제를 다시 만들어 보세요:
+
+결과와 결과2를 곱하고 결과를 다시 결과에 할당합니다(할당 속기 사용).
+소수점 이하 두 자리까지 표시되도록 결과의 서식을 지정하고 finalResult라는 변수에 저장합니다.
+typeof를 사용하여 finalResult의 데이터 유형을 확인합니다. 
+문자열인 경우 숫자 유형으로 변환하고 결과를 finalNumber라는 변수에 저장합니다.
+이 테스트를 통과하려면 finalNumber의 결과가 4633.33이어야 합니다. -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Math: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    // Final result should be 4633.33
+    // Add/update your code here
+
+    let result = 7 + 13 / 9 + 7;
+    let result2 = (100 / 2) * 6;
+
+    let cal1 = result * result2;
+    finalResult = cal1.toFixed(2);
+    console.log(finalResult);
+    console.log(typeof finalResult);
+
+    finalNumber = Number(finalResult);
+    console.log('type:', typeof finalNumber, ', finalNumber:', finalNumber);
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    para1.textContent = `Your finalResult is ${finalResult}`;
+    const para2 = document.createElement('p');
+    const finalNumberCheck =
+      isNaN(finalNumber) === false
+        ? 'finalNumber is a number type. Well done!'
+        : `Ooops! finalNumber is not a number.`;
+    para2.textContent = finalNumberCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>
